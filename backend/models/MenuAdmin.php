@@ -27,12 +27,12 @@ class MenuAdmin extends Model{
                 [
                     'label' => 'Bosh sahifa',
                     'icon' => 'home',
-                    'url' => Url::to(['/dashboard/index']),
+                    'url' => Url::to(['/']),
                     'active' => in_array(Yii::$app->controller->getRoute(), [
-                        'user/index',
-                        'user/view',
-                        'user/update',
-                        'user/create',
+                        'admin/index',
+                        'admin/view',
+                        'admin/update',
+                        'admin/create',
                     ]),
                 ],
                 [
@@ -43,7 +43,18 @@ class MenuAdmin extends Model{
                         [
                             'label'=>'<span>Menyu</span>',
                             'icon'=>'home',
-                            'url'=>Url::to(['/shopbot/menyu/index']),
+                            'url'=>Url::to(['/']),
+                            'active' => in_array(Yii::$app->controller->getRoute(), [
+                                '#',
+                                '#',
+                                '#',
+                                '#',
+                            ]),
+                        ],
+                        [
+                            'label'=>'<span>Menyu</span>',
+                            'icon'=>'home',
+                            'url'=>Url::to(['/']),
                             'active' => in_array(Yii::$app->controller->getRoute(), [
                                 '#',
                                 '#',
